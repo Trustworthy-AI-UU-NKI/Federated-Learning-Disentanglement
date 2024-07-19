@@ -1,0 +1,19 @@
+# @package _global_
+
+name: sd_utnet_p_factor_fold1
+desc: P_factor based inverse area with log_100**2 with my_details with 2 / batch_size
+
+client:
+  lr: 0.0001
+  p_factor_enabled: True
+
+server:
+  num_rounds: 100
+  gradient_mode: True
+
+data:
+  load_names: True
+  out_center: 6
+  splits: per_fold
+  fold_nr: 1
+  my_details: True

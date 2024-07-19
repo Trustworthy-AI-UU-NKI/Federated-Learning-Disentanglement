@@ -1,0 +1,26 @@
+# @package _global_
+
+name: sd_utnet_fed_exp2
+desc: Baseline centralized and federated learning for thesis
+
+client:
+  lr: 0.0001
+  p_factor_enabled: False
+  model: sd_utnet_fed
+  epochs: 5
+
+server:
+  num_rounds: 100
+  gradient_mode: False
+  resume_from_round: null
+  resume_cfg_name: null
+  save_resume_enabled: True
+
+two_stage:
+  enabled: True
+  aug_epochs: 5
+  train_rounds: 80
+
+data:
+  load_names: False
+  my_details: False

@@ -1,0 +1,20 @@
+# @package _global_
+
+name: utnet_lits_no_p_factor
+desc: Use lits dataset without p_factor
+
+client:
+  lr: 0.0001
+  p_factor_enabled: False
+  model: utnet
+
+server:
+  num_clients: 4
+  num_rounds: 60
+  gradient_mode: True
+
+data:
+  dataset: lits
+  load_names: True
+  out_center: 5
+  my_details: True
